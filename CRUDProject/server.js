@@ -4,9 +4,21 @@
  * Module dependencies.
  */
 
-var app = require('./app');
+var app = require('./config/app');
 var debug = require('debug')('crudproject:server');
 var http = require('http');
+
+// Connecting to database.
+const mongoose = require('mongoose');
+let DB = require('./config/db');
+mongoose.connect(DB.URI);
+let mongoDB = mongoose.connection;
+mongoDB.on('error',console.error.bind(console,'Connection Error'));
+mongoDB.once('open',()=>{
+  console.log("Connected with the MongoDB")
+});
+mongoose.connect(DB.URI,{useNewURIParser:true,useUnifiedTopology:true})
+
 
 /**
  * Get port from environment and store in Express.
