@@ -4,11 +4,27 @@
         <section id="scroll">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5">
-                            <h2 class="display-4">What can I do...</h2>
-                            <p>You'll have the freedom to add your homework to keep track of your busy schedule. With this tracker, it gives you the ability to add, edit, and delete you listings as you see fit!</p>
-                        </div>
+                    <div class="offset-md-1 col-md-10">
+                        <h1>Homework List<h1> <br>
+
+                        <a href="/Homework/add" class="btn btn-primary" role="button">
+                            <i class="fas fa-plus-circle"></i> Add Task
+                        </a>
+
+                        <table class="table table-bordered table-striped table-hover">
+                            <tr class="d-flex">
+                                <th class="text-center col-2">Subject</th>
+                                <th class="text-center col-2">Year</th>
+                                <th class="col-4">Description</th>
+                            </tr>
+                            <% for(let count=0;count<HomeworkList.length;count++) { %>
+                                <tr class="d-flex">
+                                    <td class="text-center col-2"><%= HomeworkList[count].Subject%></td>
+                                    <td class="text-center col-2"><%= HomeworkList[count].Year%></td>
+                                    <td class="col-4"><%= HomeworkList[count].Description%></td>
+                                </tr>
+                            <% } %>
+                        </table>
                     </div>
                 </div>
             </div>
