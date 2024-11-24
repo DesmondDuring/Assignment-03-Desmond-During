@@ -6,6 +6,6 @@ let homeworkModel = mongoose.Schema({
     Description: String
 },
 {
-    collection:"Electives"
+    collection:"Homework_Tracking"
 });
 module.exports =mongoose.model('Homework',homeworkModel);

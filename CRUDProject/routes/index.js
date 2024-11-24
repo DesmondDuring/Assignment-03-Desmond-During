@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/homework', function(req, res, next) {
-  res.render('Homework/list', { title: 'Homework List', icon: "Add Listing" });
+  res.render('Homework/list', { title: 'Homework List', icon: "View List" });
 });
 
 module.exports = router;
