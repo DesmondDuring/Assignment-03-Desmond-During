@@ -3,7 +3,11 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Welcome To DD\'S Homework Tracker!', icon: "Learn More" });
+  res.render('Landing', { title: 'Welcome To DD\'S Homework Tracker!', icon: "Learn More" });
+});
+
+router.get('/homework', function(req, res, next) {
+  res.render('Homework', { title: 'Homework List', icon: "Add Listing" });
 });
 
 module.exports = router;
