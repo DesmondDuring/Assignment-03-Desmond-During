@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 let mongoose = require('mongoose');
 let Homework = require('../model/homework');
-const homework = require('../model/homework');
 
 
 // Gets the route for displaying the Homework
