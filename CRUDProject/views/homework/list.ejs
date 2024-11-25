@@ -7,7 +7,7 @@
                     <div class="offset-md-1 col-md-10">
                         <h1>Homework List<h1> <br>
 
-                        <a href="/Homework/add" class="btn btn-primary" role="button">
+                        <a href="/homework/add" class="btn btn-primary" role="button">
                             <i class="fas fa-plus-circle"></i> Add Task
                         </a>
 
@@ -22,8 +22,24 @@
                                     <td class="text-center col-2"><%= HomeworkList[count].Subject%></td>
                                     <td class="text-center col-2"><%= HomeworkList[count].Year%></td>
                                     <td class="col-4"><%= HomeworkList[count].Description%></td>
+
+                                    <td class="text-center col-1">
+                                        <a href="/homework/edit/<%= HomeworkList[count]._id%>"
+                                            class="btn btn-primary btn-sm">
+                                        <i class="fas fa-pencil-alt"></i>Edit
+                                    </a>
+                                    </td>
+                                    
+                                    <td class="text-center col-1">
+                                        <a href="/homework/delete/<%= HomeworkList[count]._id%>"
+                                            class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>Delete
+                                    </a>
+                                    </td>                                           
                                 </tr>
-                            <% } %>
+
+                         
+                            <%} %>
                         </table>
                     </div>
                 </div>

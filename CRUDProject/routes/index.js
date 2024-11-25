@@ -5,9 +5,9 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('Landing', { title: 'Welcome To DD\'S Homework Tracker!', icon: "Learn More" });
 });
-
+/*
 router.get('/homework', function(req, res, next) {
   res.render('Homework/list', { title: 'Get Started! Here\'s the Current Homework List', icon: "View List"});
-});
+});*/
 
 module.exports = router;

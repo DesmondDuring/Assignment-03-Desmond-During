@@ -2,13 +2,15 @@ var express = require('express');
 var router = express.Router();
 let mongoose = require('mongoose');
 let Homework = require('../model/homework');
+const homework = require('../model/homework');
+
 
 /* Read Operation --> Get route for displaying the Homeworks list */
 router.get('/',async(req,res,next)=>{
     try{
         const HomeworkList = await Homework.find();
         res.render('Homework/list',{
-            title:'Homework',
+            title:'Get Started! Here\'s the Current Homework List', icon:'Add Below',
             HomeworkList:HomeworkList
         })}
         catch(err){
@@ -22,7 +24,7 @@ router.get('/',async(req,res,next)=>{
 router.get('/add',async(req,res,next)=>{
     try{
         res.render('Homework/add',{
-            title: 'Add Homework'
+            title: 'Add Homework',icon:'Add Below',
         })
     }
     catch(err)
@@ -42,7 +44,7 @@ router.post('/add',async(req,res,next)=>{
             "Description":req.body.Description,
         });
         Homework.create(newHomework).then(()=>{
-            res.redirect('/Homework');
+            res.redirect('/homework');
         })
     }
     catch(err)
@@ -57,12 +59,12 @@ router.post('/add',async(req,res,next)=>{
 router.get('/edit/:id',async(req,res,next)=>{
     try{
         const id = req.params.id;
-        const HomeworkToEdit= await Homework.findById(id);
+        const homeworkToEdit= await Homework.findById(id);
         res.render('Homework/edit',
             {
                 title:'Edit Homework',
-                displayName: req.user ? req.user.displayName:'',
-                Homework:HomeworkToEdit
+                icon:'Add Below',
+                Homework:homeworkToEdit
             }
         )
     }
@@ -83,7 +85,7 @@ router.post('/edit/:id',async(req,res,next)=>{
             "Description":req.body.Description,
         });
         Homework.findByIdAndUpdate(id,updatedHomework).then(()=>{
-            res.redirect('/Homework')
+            res.redirect('/homework')
         })
     }
     catch(err){
@@ -98,7 +100,7 @@ router.get('/delete/:id',async(req,res,next)=>{
     try{
         let id=req.params.id;
         Homework.deleteOne({_id:id}).then(()=>{
-            res.redirect('/Homework')
+            res.redirect('/homework')
         })
     }
     catch(error){
