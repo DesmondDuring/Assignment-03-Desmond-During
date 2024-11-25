@@ -36,9 +36,15 @@
 
                                     <td class="text-center col-1">
                                         <a href="/homework/delete/<%= HomeworkList[count]._id%>"
-                                            class="btn btn-danger btn-sm">
+                                            class="btn btn-danger btn-sm" onclick="popup()">
                                             <i class="fas fa-trash-alt"></i>Delete
                                         </a>
+                                        <!-- Creates a popup that informs the user they are about to delete their entry -->
+                                        <script>
+                                            function popup() {
+                                            alert("You are deleting an entry.");
+                                            }
+                                        </script>
                                     </td> 
                                 </tr>
 

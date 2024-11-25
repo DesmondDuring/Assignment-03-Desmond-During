@@ -10,7 +10,7 @@ router.get('/',async(req,res,next)=>{
     try{
         const HomeworkList = await Homework.find();
         res.render('homework/list',{
-            title:'Get Started! Here\'s your Current Homework List', icon:'Add Below',
+            title:'Get Started! Here\'s your Current Homework List', icon:'Add Listings Below',
             HomeworkList:HomeworkList
         })}
         catch(err){
@@ -24,7 +24,7 @@ router.get('/',async(req,res,next)=>{
 router.get('/add',async(req,res,next)=>{
     try{
         res.render('homework/add',{
-            title: 'Add Homework',icon:'Add Listing Below',
+            title: 'Add Homework',icon:'Add Values Below',
         })
     }
     catch(err)
@@ -63,7 +63,7 @@ router.get('/edit/:id',async(req,res,next)=>{
         res.render('homework/edit',
             {
                 title:'Edit Homework',
-                icon:'Add Below',
+                icon:'Edit Values Below',
                 Homework:homeworkToEdit
             }
         )
