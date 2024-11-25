@@ -1,10 +1,13 @@
 <%- include ../partials/header.ejs%>
 <%- include ../partials/main_nav.ejs%>
+<!-- Edit Listing Section -->
 <div class="container">
     <div class="row">
         <div class="offset-md-3 col-md-6">
             <h1><%= title %></h1>
+            <!-- Creating Edit Form -->
             <form class="form" method="POST">
+                <!-- Values to Edit -->
                 <div class="form-group">
                     <label for="nameTextField">Homework Subject</label>
                     <input type="text" class="form-control" id="subjectTextField" placeholder="Enter the Subject Name" name="Subject" value ="<%= Homework.Subject %>"required>
@@ -15,9 +18,10 @@
                 </div>
                 <div class="form-group">
                     <label for="descriptionTextArea">Homework Description</label>
-                    <textarea type="text" class="form-control" id="descriptionTextArea"  placeholder="enter the Book Description" name="Description" value ="<%= Homework.Description %>" required></textarea>
+                    <textarea type="text" class="form-control" id="descriptionTextArea"  placeholder="enter the Book Description" name="Description" required><%= Homework.Description %></textarea>
                 </div>
 
+                <!-- Confirmation -->
                 <button class="btn btn-primary" type="submit">Submit
                 <i class="fas fa-edit"></i></button>  
                 <button class="btn btn-warning" type="reset">Cancel

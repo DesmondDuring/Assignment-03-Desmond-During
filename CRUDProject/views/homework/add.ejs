@@ -6,7 +6,9 @@
                 <div class="row gx-5 align-items-center">
                     <div class="offset-md-1 col-md-10">
                         <h1><%= title %></h1>
+                        <!-- Creating Add Form -->
                         <form class="form" method="POST">
+                            <!-- Values to Add -->
                             <div class="form-group">
                                 <label for="nameTextField">Homework Subject</label>
                                 <input type="text" class="form-control" id="subjectTextField" placeholder="Enter the Subject Name" name="Subject" required>
@@ -20,6 +22,7 @@
                                 <textarea type="text" class="form-control" id="descriptionTextArea"  placeholder="enter the Book Description" name="Description" required></textarea>
                             </div>
 
+                            <!-- Confirmation -->
                             <button class="btn btn-primary" type="submit">Submit
                             <i class="fas fa-edit"></i></button>  
                             <button class="btn btn-warning" type="reset">Cancel

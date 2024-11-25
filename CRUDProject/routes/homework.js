@@ -5,7 +5,7 @@ let Homework = require('../model/homework');
 const homework = require('../model/homework');
 
 
-/* Read Operation --> Get route for displaying the Homeworks list */
+// Gets the route for displaying the Homework
 router.get('/',async(req,res,next)=>{
     try{
         const HomeworkList = await Homework.find();
@@ -20,11 +20,11 @@ router.get('/',async(req,res,next)=>{
             })
         }
         });
-/* Create Operation --> Get route for displaying me the Add Page */
+// Gets the route for displaying the homework/add page
 router.get('/add',async(req,res,next)=>{
     try{
         res.render('homework/add',{
-            title: 'Add Homework',icon:'Add Below',
+            title: 'Add Homework',icon:'Add Listing Below',
         })
     }
     catch(err)
@@ -35,7 +35,7 @@ router.get('/add',async(req,res,next)=>{
         })
     }
 });
-/* Create Operation --> Post route for processing the Add Page */
+// Posts the route for processing the homework/add page
 router.post('/add',async(req,res,next)=>{
     try{
         let newHomework = Homework({
@@ -55,7 +55,7 @@ router.post('/add',async(req,res,next)=>{
         })
     }
 });
-/* Update Operation --> Get route for displaying me the Edit Page */
+// Gets the route for displaying the homework/edit page
 router.get('/edit/:id',async(req,res,next)=>{
     try{
         const id = req.params.id;
@@ -74,7 +74,7 @@ router.get('/edit/:id',async(req,res,next)=>{
         next(err); // passing the error
     }
 });
-/* Update Operation --> Post route for processing the Edit Page */ 
+// Posts the route for processing the homework/edit page  
 router.post('/edit/:id',async(req,res,next)=>{
     try{
         let id=req.params.id;
@@ -95,7 +95,7 @@ router.post('/edit/:id',async(req,res,next)=>{
         })
     }
 });
-/* Delete Operation --> Get route to perform Delete Operation */
+// Gets the route to perform the delete operation 
 router.get('/delete/:id',async(req,res,next)=>{
     try{
         let id=req.params.id;

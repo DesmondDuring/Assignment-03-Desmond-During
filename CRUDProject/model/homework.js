@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// Defines homeworkModel Template
 let homeworkModel = mongoose.Schema({
     Subject: String,
     Year: Number,
