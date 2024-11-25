@@ -6,7 +6,7 @@ This ExpressJS application will be a homework tracker which will allow users to 
 they post so they can keep track of their work to stay organized. It will provide the user with a list which they have complete
 control over. <br>
 ![Image of a homework to do list.](to_do_list.png) <br>
-The application will work similar to the following image. 
+The application will work similar to the following image. The main use case for this is for Students or Professors to keep track of there important tasks that they must complete in one place.
 The bootstrap used for this project can be found at https://startbootstrap.com/previews/one-page-wonder
 
 w3schools was used for some aid: https://www.w3schools.com/js/js_popup.asp
