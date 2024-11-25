@@ -15,30 +15,30 @@
                             <tr class="d-flex">
                                 <th class="text-center col-2">Subject</th>
                                 <th class="text-center col-2">Year</th>
-                                <th class="col-4">Description</th>
+                                <th class="col-5">Description</th>
                             </tr>
                             <% for(let count=0;count<HomeworkList.length;count++) { %>
                                 <tr class="d-flex">
                                     <td class="text-center col-2"><%= HomeworkList[count].Subject%></td>
                                     <td class="text-center col-2"><%= HomeworkList[count].Year%></td>
-                                    <td class="col-4"><%= HomeworkList[count].Description%></td>
+                                    <td class="col-5"><%= HomeworkList[count].Description%></td>
 
                                     <td class="text-center col-1">
                                         <a href="/homework/edit/<%= HomeworkList[count]._id%>"
                                             class="btn btn-primary btn-sm">
-                                        <i class="fas fa-pencil-alt"></i>Edit
-                                    </a>
+                                            <i class="fas fa-pencil-alt"></i>Edit
+                                        </a>
                                     </td>
-                                    
+
                                     <td class="text-center col-1">
                                         <a href="/homework/delete/<%= HomeworkList[count]._id%>"
                                             class="btn btn-danger btn-sm">
-                                        <i class="fas fa-trash-alt"></i>Delete
-                                    </a>
-                                    </td>                                           
+                                            <i class="fas fa-trash-alt"></i>Delete
+                                        </a>
+                                    </td> 
                                 </tr>
 
-                         
+                                
                             <%} %>
                         </table>
                     </div>

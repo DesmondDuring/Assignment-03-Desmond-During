@@ -5,4 +5,4 @@ Desmond During 100874002
 This ExpressJS application will be a homework tracker which will allow users to create, add, edit, and delete the homework
 they post so they can keep track of their work to stay organized. <br>
 ![Image of a homework to do list.](to_do_list.png) <br>
-The application will work similar to the following image.
+The application will work similar to the following image. The bootstrap used for this project can be found at https://startbootstrap.com/previews/one-page-wonder
